@@ -20,16 +20,17 @@ class SecMax {
                 max = arr[i];
             }
         }
-
+        /*
         for (int i = 0; i < size ; i++) {
             if(arr[i] == max) {
-                continue;
+               continue;
             }
             else {
                 max2 = arr[i];
                 break;
             }
-        }
+        }*/
+        max2 = Integer.MIN_VALUE;
         for (int i = 0; i < size ; i++) {
             if (arr[i] == max) {
                 continue;
