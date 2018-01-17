@@ -29,9 +29,11 @@ class Time {
     }
     public Time differenceTime(Time a) {
         Time test = new Time();
-        test.hours = Math.abs(this.hours-a.hours);
-        test.minutes = Math.abs(this.minutes-a.minutes);
-        test.seconds = Math.abs(this.seconds-a.seconds);
+        test.seconds = (this.hours*3600+this.minutes*60+this.seconds) -(a.hours*3600+a.minutes*60+a.seconds);
+        test.minutes = Math.abs(test.seconds/60);
+        test.seconds = Math.abs(test.seconds%60);
+        test.hours = Math.abs(test.minutes/60);
+        test.minutes = Math.abs(test.minutes%60);
         return test;
     }
     public Time greaterInTime(Time d) {
@@ -61,10 +63,13 @@ class TimeCalculator {
         first.init();
         second.init();
         third.init();
+        first.display();
+        second.display();
+        third.display();
         int choice;
         do {
         System.out.println("Choose your option");
-        System.out.println("Enter 1 if you want to calculate difference between two times");
+        System.out.println("Enter 1 if you want to calculate difference between the first two times");
         System.out.println("Enter 2 if you want to calculate greatest among the three times");
         System.out.println("Enter 3 if you want to display all the three times");
         Scanner si = new Scanner(System.in);
