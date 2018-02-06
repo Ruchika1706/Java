@@ -5,7 +5,10 @@ class RemoveSpaces {
         Scanner si = new Scanner(System.in);
         int size = si.nextInt();
         String arr[] = new String[size];
+        /*si.nextLine(); This is a hack to flush the input stream buffer because of which 
+        the below loop was taking one input less as /n was still there in the input stream buffer*/
         for(int i=0;i<size;i++){
+            System.out.println("Enter String "+ i );
             arr[i] = si.nextLine();
         }
         System.out.println("Strings you entered");
