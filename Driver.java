@@ -1,3 +1,5 @@
+/*Example showing Object class reference array can be created and can refer to objects of all other classes since each class inherit object by default
+*/
 import java.util.Scanner;
 
 class Subject {
