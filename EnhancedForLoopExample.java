@@ -1,3 +1,4 @@
+//Array of strings, change those string that ends with hello to anything the user likes and display it
 import java.util.Scanner;
 class EnhancedForLoopExample {
     public static void main(String args[]){
@@ -5,17 +6,14 @@ class EnhancedForLoopExample {
        // String sample[] = new String[test.length];
        System.out.println("byeHello".indexOf("hello"));
         for(String each: test){
-            if(each.toLowercase().endsWith("hello")){
-                int index = each.indexOf("hello");
-                System.out.println("Enter the replacement string for hello");
+            if(each.toLowerCase().endsWith("hello")){
+                System.out.println("The string we are working with is " + each);
+		System.out.println("Enter the replacement string for hello");
                 Scanner si = new Scanner(System.in);
                 String x = si.next();
-                each = each.replace("hello",x);
-                System.out.println(each);
+                each = each.toLowerCase().replace("hello",x);
             }
-            else {
                 System.out.println(each);
-            }
         }
     }
 }
