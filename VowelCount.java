@@ -1,3 +1,4 @@
+/*Take a string input from user. Create a function which throws an exception for a consonant and thus count the number of vowels in the string*/
 import java.util.Scanner;
 class VowelCount {
     static int count=0;
