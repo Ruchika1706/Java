@@ -1,3 +1,4 @@
+/* Do exception handling for scenarios when age is less than 17 and salary <3000*/
 import java.util.Scanner;
 class EmployeeData {
     private String name;
