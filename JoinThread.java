@@ -1,7 +1,7 @@
 //whenever join() is applied on a Thread, gives control to it when it starts
 // executing i.e. whenever it gets control, it won;t transfer the control to 
 //other thread till it completes itself, even if it sleeps in between.If another
-//thread has started before it, it can share, but no new thread will execute
+//thread has started before it, it can share when this thread goes to sleep in case, but no new thread will execute
 //till this thrad stops
 class Join extends Thread{
     public Join(String name){
@@ -27,6 +27,8 @@ class Join2 extends Thread{
         for(int i=6;i<=7;i++){
             System.out.println(i + " "+this.getName());
             try{
+		//Thread.sleep() causes the currently executing thread to sleep for a specified number of milliseconds, subject to system's
+		//timers and scehdulers precision and accuracy
                 Thread.sleep(500);
             }
             catch(InterruptedException e){
